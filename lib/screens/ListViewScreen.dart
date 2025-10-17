@@ -6,6 +6,16 @@ class ListViewScreen extends StatefulWidget {
   @override
   State<ListViewScreen> createState() => _ListViewScreenState();
 }
+
+class _ListViewScreenState extends State<ListViewScreen> {
+  final List<String> subjects = ['Бананы', 'Мандарины', 'Яблоки'];
+  final TextEditingController controller = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: subjects.length,
         itemBuilder: (context, index) => ListTile(
           title: Text(subjects[index]),
           trailing: IconButton(
