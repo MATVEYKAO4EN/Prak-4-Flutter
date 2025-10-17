@@ -11,24 +11,7 @@ class _ColumnScreenState extends State<ColumnScreen> {
   final List<String> subjects = ['Помидоры', 'Огурцы', 'Морковка'];
   final TextEditingController controller = TextEditingController();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            for (int i = 0; i < subjects.length; i++)
-              ListTile(
-                title: Text(subjects[i]),
-                trailing: IconButton(
-                  icon: const Icon(Icons.delete, color: Colors.red),
-                  onPressed: () => setState(() => subjects.removeAt(i)),
-                ),
-              ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
+  @overrid(
         onPressed: () => _addSubjectDialog(context),
         child: const Icon(Icons.add),
       ),

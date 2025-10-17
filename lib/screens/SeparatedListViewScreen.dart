@@ -7,27 +7,7 @@ class SeparatedListViewScreen extends StatefulWidget {
   State<SeparatedListViewScreen> createState() => _SeparatedListViewScreenState();
 }
 
-class _SeparatedListViewScreenState extends State<SeparatedListViewScreen> {
-  final List<String> subjects = ['Сыр', 'Сметана', 'Молоко'];
-  final TextEditingController controller = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.separated(
-        itemCount: subjects.length,
-        itemBuilder: (context, index) => ListTile(
-          title: Text(subjects[index]),
-          trailing: IconButton(
-            icon: const Icon(Icons.delete, color: Colors.red),
-            onPressed: () => setState(() => subjects.removeAt(index)),
-          ),
-        ),
-        separatorBuilder: (context, index) => const Divider(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _addSubjectDialog(context),
-        child: const Icon(Icons.add),
+class
       ),
     );
   }
